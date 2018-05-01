@@ -11,7 +11,7 @@ public class ConnectionManager {
 
     public static EntityManager getEntityManager() {
         if (em == null) {
-            factory = Persistence.createEntityManagerFactory("trabalho_dsoii");
+            factory = Persistence.createEntityManagerFactory("trade_things");
             em = factory.createEntityManager();
         }
         return em;

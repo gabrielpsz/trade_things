@@ -11,9 +11,28 @@
 </h:head>
 <h:body>
 
+<style>
+	.ui-widget-content {
+	    border: 1px solid #ffffff;
+	}
+</style>
+
 	<h:form>
-		<p:spinner />
+		<div>
+			<p:panelGrid columns="1">
+				<p:outputLabel value="Email"></p:outputLabel>
+				<p:inputText value="#{loginBean.email}"></p:inputText>
+				
+				<p:outputLabel value="Senha"></p:outputLabel>
+				<p:inputText value="#{loginBean.senha}"></p:inputText>
+				
+				<p:commandButton value="Login"></p:commandButton>
+			</p:panelGrid>
+		</div>
+		
+		<p:commandButton actionListener="#{usuarioBean.abreCadastroUsuario()}" value="Cadastrar usuário"></p:commandButton>
 	</h:form>
+
 
 </h:body>
 </html>
