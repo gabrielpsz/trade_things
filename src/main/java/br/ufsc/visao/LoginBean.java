@@ -1,18 +1,37 @@
 package br.ufsc.visao;
 
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 
+import br.ufsc.controle.UsuarioControle;
 import br.ufsc.modelo.Usuario;
 
 @ManagedBean
 @SessionScoped
 public class LoginBean {
 	
+	private UsuarioControle usuarioControle = new UsuarioControle();
 	private String email;
 	private String senha;
+	private Boolean logado;
 	
 	private Usuario usuarioLogado;
+	
+	public String autentica() {
+		FacesContext context = FacesContext.getCurrentInstance();
+		usuarioLogado = usuarioControle.autenticarUsuario(email, senha);
+		System.out.println(usuarioLogado);
+		if (usuarioLogado == null) {
+			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuario ou senha inválido!", ""));
+		} else {
+			System.out.println("Logou");
+			logado = true;
+			return "index";
+		}
+	return "";
+	}
 	
 	public String getEmail() {
 		return email;

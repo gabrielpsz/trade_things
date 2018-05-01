@@ -14,9 +14,9 @@
 		    <!-- Define qual variação do SQL será utilizada -->
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
 			<!-- Define quando mostrar no log as consultas SQL geradas -->
-			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.show_sql" value="true" />
 			<!-- Formata o log das consultas SQL geradas -->
-			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.format_sql" value="false" />
 
 			<!-- Propriedades JPA -->
 			<!-- Nome completo da classe do driver de conexão -->

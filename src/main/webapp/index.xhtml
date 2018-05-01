@@ -8,31 +8,45 @@
 	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </h:head>
 <h:body>
 
 <style>
-	.ui-widget-content {
-	    border: 1px solid #ffffff;
+	
+	body {
+		background-color: #B2EBF2;
 	}
+	
+	.ui-widget-content {
+		background-color: rgb(211,244, 248);
+	    border: rgb(211,244, 248);
+		padding: 10px;
+		border-radius: 10px;
+	}
+	.header {
+		text-align: right;
+	}
+
+
 </style>
 
-	<h:form>
-		<div>
-			<p:panelGrid columns="1">
-				<p:outputLabel value="Email"></p:outputLabel>
-				<p:inputText value="#{loginBean.email}"></p:inputText>
-				
-				<p:outputLabel value="Senha"></p:outputLabel>
-				<p:inputText value="#{loginBean.senha}"></p:inputText>
-				
-				<p:commandButton value="Login"></p:commandButton>
-			</p:panelGrid>
-		</div>
+		<h:form>
 		
-		<p:commandButton actionListener="#{usuarioBean.abreCadastroUsuario()}" value="Cadastrar usuário"></p:commandButton>
-	</h:form>
+		<div class="header">
+			<p:outputLabel class="login-header" value="Email:"></p:outputLabel>
+			<p:inputText style="width:100px" value="#{loginBean.email}"></p:inputText>
+			
+			<p:outputLabel class="login-header" value="Senha:"></p:outputLabel>
+			<p:password style="width:100px; margin-right: 10px;" value="#{loginBean.senha}"></p:password>
+			
+			<p:commandButton value="Login" actionListener="#{loginBean.autentica()}"></p:commandButton>
+		</div>
+		<div class="header">
+			<p:commandButton value="Cadastrar" actionListener="#{usuarioBean.abreCadastroUsuario()}"></p:commandButton>
+		</div>
 
+		</h:form>
 
 </h:body>
 </html>

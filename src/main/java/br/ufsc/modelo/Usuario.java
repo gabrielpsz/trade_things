@@ -2,12 +2,23 @@ package br.ufsc.modelo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.SequenceGenerator;
 
 @Entity
+@NamedQueries({
+		@NamedQuery(name = "Usuario.buscarTodos", query = "SELECT u FROM Usuario u"),
+		@NamedQuery(name = "Usuario.buscarPorEmailSenha", query = "SELECT u FROM Usuario u WHERE u.email = :login AND u.senha = :senha") })
 public class Usuario {
 
-    @Id
+	@Id
+    @Column
+    @SequenceGenerator(name="usuario_id_seq",sequenceName="usuario_id_seq",allocationSize=1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "usuario_id_seq")
     private Long id;
     @Column
     private String nome;

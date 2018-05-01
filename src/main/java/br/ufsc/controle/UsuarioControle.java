@@ -20,9 +20,11 @@ public class UsuarioControle {
 		if (usuario.getSenha() == null || usuario.getSenha().trim().isEmpty()) {
 			throw new Exception("A senha é obrigatória!");
 		}
-		if (usuario.getId() == 0) {
+		if (usuario.getId() == null) {
+			System.out.println("Salvando memo");
 			usuarioDao.salvar(usuario);
 		}else {
+			System.out.println("Atualizando memo");
 			usuarioDao.update();
 		}
 	}

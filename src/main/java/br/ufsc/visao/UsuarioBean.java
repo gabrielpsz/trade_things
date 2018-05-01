@@ -22,6 +22,7 @@ public class UsuarioBean {
 	private String confirmaSenha;
 	private boolean skip;
 	
+	
 	public String salvar() {
 		FacesContext faces = FacesContext.getCurrentInstance();
 		if (!usuarioEdit.getSenha().equals(confirmaSenha)) {
@@ -31,16 +32,20 @@ public class UsuarioBean {
 			try {
 				usuarioControle.salvar(usuarioEdit);
 				faces.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Cadastrado com sucesso!", ""));
+				FacesContext.getCurrentInstance().getExternalContext().redirect("../index.xhtml");
 			} catch (Exception e) {
 				faces.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, e.getMessage(), ""));
-				e.printStackTrace();
 				return "";
 			}	
-			return "index";
+			return "";
 	}
 	
-	public String abreCadastroUsuario() {
-		return "cadastroUsuario";
+	public void abreCadastroUsuario() {
+		try {
+		FacesContext.getCurrentInstance().getExternalContext().redirect("publico/cadastrarUsuario.xhtml");
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 	
 	//
@@ -53,6 +58,16 @@ public class UsuarioBean {
 	public void setUsuarioEdit(Usuario usuarioEdit) {
 		this.usuarioEdit = usuarioEdit;
 	}
+
+	public String getConfirmaSenha() {
+		return confirmaSenha;
+	}
+
+	public void setConfirmaSenha(String confirmaSenha) {
+		this.confirmaSenha = confirmaSenha;
+	}
+	
+	
 
 
 }

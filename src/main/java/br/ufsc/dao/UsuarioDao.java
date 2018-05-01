@@ -8,8 +8,7 @@ import java.util.List;
 public interface UsuarioDao extends Dao<Usuario>{
 
     List<Usuario> buscarTodos();
-    List<Usuario> buscarPorCPF(String cpf);
-    Usuario buscarPorId(Long idUsuario);
+    Usuario buscarPorId(Long id);
     Usuario autenticarUsuario(String login, String senha);
 
 }

@@ -10,9 +10,43 @@
 <h:head>
 </h:head>
 <h:body>
+<style>
+	body {
+		background-color: #B2EBF2;
+	}
+	.ui-widget-content {
+		background-color: rgb(211,244, 248);
+	    border: rgb(211,244, 248);
+		padding: 10px;
+		border-radius: 10px;
+	}
+	.cadastro {
+		background-color: rgb(211,244, 248);
+		width: 500px;
+		text-align: center;
+		margin-top: 10%;
+		margin-left: 500px;
+	}
 
-	
+</style>
 
+	<p:growl id="messages"/>
+
+	<h:form>
+	<div class="cadastro">
+		<p:panelGrid columns="2">
+			<p:outputLabel value="Nome:"></p:outputLabel>
+			<p:inputText value="#{usuarioBean.usuarioEdit.nome}"></p:inputText>
+			<p:outputLabel value="Email:"></p:outputLabel>
+			<p:inputText value="#{usuarioBean.usuarioEdit.email}"></p:inputText>
+			<p:outputLabel value="Senha:"></p:outputLabel>
+			<p:inputText value="#{usuarioBean.usuarioEdit.senha}"></p:inputText>
+			<p:outputLabel value="Confirma Senha:"></p:outputLabel>
+			<p:inputText value="#{usuarioBean.confirmaSenha}"></p:inputText>
+		</p:panelGrid>
+		<p:commandButton update="messages" value="Cadastrar" actionListener="#{usuarioBean.salvar()}"></p:commandButton>
+	</div>
+	</h:form>
 
 </h:body>
 </html>
