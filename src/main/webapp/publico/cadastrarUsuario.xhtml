@@ -40,11 +40,12 @@
 			<p:outputLabel value="Email:"></p:outputLabel>
 			<p:inputText value="#{usuarioBean.usuarioEdit.email}"></p:inputText>
 			<p:outputLabel value="Senha:"></p:outputLabel>
-			<p:inputText value="#{usuarioBean.usuarioEdit.senha}"></p:inputText>
+			<p:password value="#{usuarioBean.usuarioEdit.senha}"></p:password>
 			<p:outputLabel value="Confirma Senha:"></p:outputLabel>
-			<p:inputText value="#{usuarioBean.confirmaSenha}"></p:inputText>
+			<p:password value="#{usuarioBean.confirmaSenha}"></p:password>
 		</p:panelGrid>
 		<p:commandButton update="messages" value="Cadastrar" actionListener="#{usuarioBean.salvar()}"></p:commandButton>
+		<p:commandButton value="Novo produto" actionListener="#{usuarioBean.cadastrarNovoProduto()}"></p:commandButton>
 	</div>
 	</h:form>
 

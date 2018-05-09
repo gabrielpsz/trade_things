@@ -11,4 +11,13 @@ public abstract class DaoFactory {
         return usuarioDao;
     }
 
+    private static ProdutoDao produtoDao;
+
+    public static ProdutoDao getProdutoDao() {
+        if (produtoDao == null) {
+            produtoDao = new ProdutoDaoImp();
+        }
+        return produtoDao;
+    }
+
 }

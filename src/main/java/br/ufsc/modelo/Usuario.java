@@ -1,13 +1,10 @@
 package br.ufsc.modelo;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.SequenceGenerator;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @NamedQueries({
@@ -26,6 +23,9 @@ public class Usuario {
     private String email;
     @Column
     private String senha;
+    @OneToMany(mappedBy="usuario",cascade = {CascadeType.ALL},orphanRemoval = true)
+    @LazyCollection(LazyCollectionOption.FALSE)
+    private List<Produto> produtos;
 
     public Long getId() {
         return id;
@@ -57,5 +57,23 @@ public class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public List<Produto> getProdutos() {
+        return produtos;
+    }
+
+    public void setProdutos(List<Produto> produtos) {
+        this.produtos = produtos;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", email='" + email + '\'' +
+                ", senha='" + senha + '\'' +
+                '}';
     }
 }

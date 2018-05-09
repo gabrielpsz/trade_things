@@ -6,13 +6,14 @@ import java.util.List;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 
 import br.ufsc.controle.UsuarioControle;
 import br.ufsc.modelo.Usuario;
 
 @ManagedBean
-@SessionScoped
+@ViewScoped
 public class UsuarioBean {
 	
 	private Usuario usuarioEdit = new Usuario();
@@ -26,7 +27,7 @@ public class UsuarioBean {
 	public String salvar() {
 		FacesContext faces = FacesContext.getCurrentInstance();
 		if (!usuarioEdit.getSenha().equals(confirmaSenha)) {
-			faces.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Senhas não conferem!", ""));
+			faces.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Senhas nï¿½o conferem!", ""));
 			return "";
 		}
 			try {
@@ -43,6 +44,14 @@ public class UsuarioBean {
 	public void abreCadastroUsuario() {
 		try {
 		FacesContext.getCurrentInstance().getExternalContext().redirect("publico/cadastrarUsuario.xhtml");
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	public void cadastrarNovoProduto() {
+		try {
+			FacesContext.getCurrentInstance().getExternalContext().redirect("cadastrarProduto.xhtml");
 		} catch(Exception e) {
 			System.out.println(e.getMessage());
 		}
