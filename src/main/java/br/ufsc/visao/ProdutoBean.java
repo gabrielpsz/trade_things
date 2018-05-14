@@ -19,6 +19,7 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -26,10 +27,12 @@ import java.util.List;
 @ViewScoped
 public class ProdutoBean extends _Bean {
 
+    ProdutoControle produtoControle = new ProdutoControle();
+    List<Produto> produtos = produtoControle.queryAll();
     List<Tipo> tipos = Arrays.asList(Tipo.values());
     List<Status> status = Arrays.asList(Status.values());
     Produto produtoEdit = new Produto();
-    ProdutoControle produtoControle = new ProdutoControle();
+
     String displayedLogo = "";
 
     FacesContext context = FacesContext.getCurrentInstance();
@@ -49,6 +52,14 @@ public class ProdutoBean extends _Bean {
             e.printStackTrace();
         }
         return "";
+    }
+
+    public void trocarProduto() {
+
+    }
+
+    public void visualizarProduto() {
+
     }
 
     public List<Tipo> getTipos() {
@@ -81,5 +92,13 @@ public class ProdutoBean extends _Bean {
 
     public void setDisplayedLogo(String displayedLogo) {
         this.displayedLogo = displayedLogo;
+    }
+
+    public List<Produto> getProdutos() {
+        return produtos;
+    }
+
+    public void setProdutos(List<Produto> produtos) {
+        this.produtos = produtos;
     }
 }

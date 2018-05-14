@@ -5,6 +5,8 @@ import br.ufsc.dao.ProdutoDao;
 import br.ufsc.modelo.Produto;
 import br.ufsc.modelo.Usuario;
 
+import java.util.List;
+
 public class ProdutoControle {
 
     ProdutoDao produtoDao = DaoFactory.getProdutoDao();
@@ -18,5 +20,9 @@ public class ProdutoControle {
         }else {
             produtoDao.update();
         }
+    }
+
+    public List<Produto> queryAll() {
+        return produtoDao.queryAll();
     }
 }

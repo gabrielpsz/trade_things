@@ -41,10 +41,11 @@
                 <p:selectOneMenu value="#{produtoBean.produtoEdit.tipo}">
                     <f:selectItems id="tipoInput" value="#{produtoBean.tipos}" var="tipo" itemLabel="#{tipo.label}" itemValue="#{tipo}"/>
                 </p:selectOneMenu>
+                <p:outputLabel value="Foto do produto:"></p:outputLabel>
                 <h:panelGrid columns="1" cellpadding="4" style="text-align:center;">
                     <p:graphicImage id="logoImage" width="60" height="60" cache="false" url="../upload/#{produtoBean.displayedLogo}" />
                     <p:fileUpload fileUploadListener="#{produtoBean.uploadNewLogo}"
-                                  update="messages,logoImage" auto="true" sizeLimit="1000000" label="Logo" />
+                                  update="messages,logoImage" auto="true" sizeLimit="1000000" label="Foto" />
                 </h:panelGrid>
             </p:panelGrid>
             <p:commandButton update="messages" value="Cadastrar" actionListener="#{produtoBean.salvar()}"></p:commandButton>

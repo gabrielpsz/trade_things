@@ -46,7 +46,26 @@
 			<p:commandButton value="Cadastrar" actionListener="#{usuarioBean.abreCadastroUsuario()}"></p:commandButton>
 		</div>
 
-			<div></div>
+			<div id="produtos">
+				<p:dataGrid id="table" var="entity"
+							value="#{produtoBean.produtos}" columns="1" rows="5"
+							paginatorAlwaysVisible="false" paginatorPosition="bottom"
+							emptyMessage="Sem produtos para troca">
+					<p:panel>
+						<h:outputText value="Nome: #{entity.nome}" />
+						<p:commandLink styleClass="button"
+									   actionListener="#{produtoBean.visualizarProduto()}"
+									   title="Visualizar" >
+							<f:param name="entity" value="#{entity}" />
+						</p:commandLink>
+						<p:commandLink styleClass="button"
+									   actionListener="#{produtoBean.trocarProduto()}"
+									   title="Trocar">
+							<f:param name="entity" value="#{entity}" />
+						</p:commandLink>
+					</p:panel>
+				</p:dataGrid>
+			</div>
 
 		</h:form>
 

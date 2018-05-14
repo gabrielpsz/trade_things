@@ -3,12 +3,14 @@ package br.ufsc.modelo;
 import javax.persistence.*;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "Produto.buscarTodos", query = "SELECT p FROM Produto p")})
 public class Produto {
 
     @Id
     @Column
-    @SequenceGenerator(name="usuario_id_seq",sequenceName="usuario_id_seq",allocationSize=1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "usuario_id_seq")
+    @SequenceGenerator(name="produto_id_seq",sequenceName="produto_id_seq",allocationSize=1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "produto_id_seq")
     private Long id;
     @Column
     private String nome;
