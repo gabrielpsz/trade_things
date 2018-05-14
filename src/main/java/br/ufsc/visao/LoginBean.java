@@ -19,18 +19,21 @@ public class LoginBean {
 	
 	private Usuario usuarioLogado;
 	
-	public String autentica() {
+	public void autentica() {
 		FacesContext context = FacesContext.getCurrentInstance();
 		usuarioLogado = usuarioControle.autenticarUsuario(email, senha);
 		System.out.println(usuarioLogado);
 		if (usuarioLogado == null) {
-			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuario ou senha inválido!", ""));
+			context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuario ou senha invï¿½lido!", ""));
 		} else {
 			System.out.println("Logou");
 			logado = true;
-			return "index";
+			try {
+				FacesContext.getCurrentInstance().getExternalContext().redirect("publico/cadastrarProduto.xhtml");
+			} catch(Exception e) {
+				System.out.println(e.getMessage());
+			}
 		}
-	return "";
 	}
 	
 	public String getEmail() {

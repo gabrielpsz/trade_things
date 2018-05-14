@@ -30,6 +30,7 @@ public class ProdutoBean {
         FacesContext faces = FacesContext.getCurrentInstance();
         try {
             System.out.println(loginBean.getUsuarioLogado());
+            produtoEdit.setStatus(Status.DISPONIVEL);
             produtoEdit.setUsuario(loginBean.getUsuarioLogado());
             produtoControle.salvar(produtoEdit);
             faces.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Cadastrado com sucesso!", ""));

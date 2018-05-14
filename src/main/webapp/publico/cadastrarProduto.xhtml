@@ -35,13 +35,11 @@
     <h:form>
         <div class="cadastro">
             <p:panelGrid columns="2">
-                <p:outputLabel value="Nome:"></p:outputLabel>
+                <p:outputLabel value="Nome do produto:"></p:outputLabel>
                 <p:inputText value="#{produtoBean.produtoEdit.nome}"></p:inputText>
+                <p:outputLabel value="Tipo do produto:"></p:outputLabel>
                 <p:selectOneMenu value="#{produtoBean.produtoEdit.tipo}">
                     <f:selectItems id="tipoInput" value="#{produtoBean.tipos}" var="tipo" itemLabel="#{tipo.label}" itemValue="#{tipo}"/>
-                </p:selectOneMenu>
-                <p:selectOneMenu value="#{produtoBean.produtoEdit.status}">
-                    <f:selectItems id="perfilInput" value="#{produtoBean.status}" var="status" itemLabel="#{status.label}" itemValue="#{status}"/>
                 </p:selectOneMenu>
             </p:panelGrid>
             <p:commandButton update="messages" value="Cadastrar" actionListener="#{produtoBean.salvar()}"></p:commandButton>
