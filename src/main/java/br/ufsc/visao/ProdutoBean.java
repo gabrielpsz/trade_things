@@ -4,6 +4,8 @@ import br.ufsc.controle.ProdutoControle;
 import br.ufsc.modelo.Produto;
 import br.ufsc.modelo.Status;
 import br.ufsc.modelo.Tipo;
+import org.primefaces.event.FileUploadEvent;
+import org.primefaces.model.UploadedFile;
 
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
@@ -11,17 +13,24 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.geom.AffineTransform;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
 @ManagedBean
 @ViewScoped
-public class ProdutoBean {
+public class ProdutoBean extends _Bean {
 
     List<Tipo> tipos = Arrays.asList(Tipo.values());
     List<Status> status = Arrays.asList(Status.values());
     Produto produtoEdit = new Produto();
     ProdutoControle produtoControle = new ProdutoControle();
+    String displayedLogo = "";
 
     FacesContext context = FacesContext.getCurrentInstance();
     LoginBean loginBean = context.getApplication().evaluateExpressionGet(context, "#{loginBean}", LoginBean.class);
@@ -64,5 +73,13 @@ public class ProdutoBean {
 
     public void setStatus(List<Status> status) {
         this.status = status;
+    }
+
+    public String getDisplayedLogo() {
+        return displayedLogo;
+    }
+
+    public void setDisplayedLogo(String displayedLogo) {
+        this.displayedLogo = displayedLogo;
     }
 }

@@ -43,15 +43,7 @@ public class UsuarioBean {
 	
 	public void abreCadastroUsuario() {
 		try {
-		FacesContext.getCurrentInstance().getExternalContext().redirect("publico/cadastrarUsuario.xhtml");
-		} catch(Exception e) {
-			System.out.println(e.getMessage());
-		}
-	}
-
-	public void cadastrarNovoProduto() {
-		try {
-			FacesContext.getCurrentInstance().getExternalContext().redirect("cadastrarProduto.xhtml");
+		FacesContext.getCurrentInstance().getExternalContext().redirect("cadastrarUsuario.xhtml");
 		} catch(Exception e) {
 			System.out.println(e.getMessage());
 		}
