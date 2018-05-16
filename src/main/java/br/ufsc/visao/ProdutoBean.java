@@ -55,11 +55,12 @@ public class ProdutoBean extends _Bean {
     }
 
     public void trocarProduto() {
+        Produto p = (Produto)getJsfParam("entity");
 
     }
 
     public void visualizarProduto() {
-
+        produtoEdit = (Produto)getJsfParam("entity");
     }
 
     public List<Tipo> getTipos() {

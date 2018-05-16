@@ -11,34 +11,36 @@ import javax.faces.context.FacesContext;
 
 import br.ufsc.controle.UsuarioControle;
 import br.ufsc.modelo.Usuario;
+import org.primefaces.context.RequestContext;
 
 @ManagedBean
 @ViewScoped
 public class UsuarioBean {
 	
 	private Usuario usuarioEdit = new Usuario();
-	private List<Usuario> listUsuario = new ArrayList<Usuario>();
 	private UsuarioControle usuarioControle = new UsuarioControle();
-	private Usuario usuarioSelecionado = new Usuario();
 	private String confirmaSenha;
-	private boolean skip;
+
+	FacesContext context = FacesContext.getCurrentInstance();
+	LoginBean loginBean = context.getApplication().evaluateExpressionGet(context, "#{loginBean}", LoginBean.class);
 	
 	
-	public String salvar() {
+	public void salvar() {
 		FacesContext faces = FacesContext.getCurrentInstance();
 		if (!usuarioEdit.getSenha().equals(confirmaSenha)) {
 			faces.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Senhas n�o conferem!", ""));
-			return "";
 		}
-			try {
-				usuarioControle.salvar(usuarioEdit);
-				faces.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Cadastrado com sucesso!", ""));
-				FacesContext.getCurrentInstance().getExternalContext().redirect("../index.xhtml");
-			} catch (Exception e) {
-				faces.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, e.getMessage(), ""));
-				return "";
-			}	
-			return "";
+		try {
+			usuarioControle.salvar(usuarioEdit);
+			faces.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Cadastrado com sucesso!", ""));
+			FacesContext.getCurrentInstance().getExternalContext().redirect("../index.xhtml");
+		} catch (Exception e) {
+			faces.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, e.getMessage(), ""));
+		}
+	}
+
+	public void editar() {
+		usuarioEdit = loginBean.getUsuarioLogado();
 	}
 	
 	public void abreCadastroUsuario() {

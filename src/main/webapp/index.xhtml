@@ -52,9 +52,15 @@
 		<ui:fragment rendered="#{loginBean.logado}">
 			<div class="header-nome">
 				<p:outputLabel value="Bem vindo, #{loginBean.usuarioLogado.nome}"></p:outputLabel>
+				<p:commandButton styleClass="button"
+							   oncomplete="PF('dialogUsuario').show();"
+							   actionListener="#{usuarioBean.editar()}"
+							   update="dialogUsuario, panelUsuario"
+							   title="Editar" value="Editar"/>
 			</div>
 			<div class="header">
 				<p:commandButton value="Logout" actionListener="#{loginBean.logout()}"></p:commandButton>
+				<p:commandButton value="Cadastrar produto" actionListener="#{loginBean.abrirCadastroProduto()}"></p:commandButton>
 			</div>
 		</ui:fragment>
 
@@ -62,11 +68,13 @@
 				<p:dataGrid id="table" var="entity"
 							value="#{produtoBean.produtos}" columns="2"
 							emptyMessage="Sem produtos para troca">
-					<p:panel style="background-color: #cccccc;">
+					<p:panel rendered="#{entity.usuario != loginBean.usuarioLogado}" style="background-color: #cccccc;">
 						<h:outputText value="Nome: #{entity.nome}" />
 						<br></br>
 						<p:commandLink styleClass="button"
+									   oncomplete="PF('dialogProduto').show();"
 									   actionListener="#{produtoBean.visualizarProduto()}"
+									   update="dialog, panel"
 									   title="Visualizar" value="Visualizar">
 							<f:param name="entity" value="#{entity}" />
 						</p:commandLink>
@@ -81,6 +89,44 @@
 			</div>
 
 		</h:form>
+
+	<h:form prependId="false">
+		<p:dialog id="dialog"
+				  header="Produto"
+				  widgetVar="dialogProduto" resizable="false" width="500"
+				  hideEffect="drop" modal="true">
+			<p:panelGrid id="panel" columns="2">
+				<p:outputLabel value="Dono do produto:"></p:outputLabel>
+				<p:outputLabel value="#{produtoBean.produtoEdit.usuario.nome}"></p:outputLabel>
+				<p:outputLabel value="Nome do produto:"></p:outputLabel>
+				<p:outputLabel value="#{produtoBean.produtoEdit.nome}"></p:outputLabel>
+				<p:outputLabel value="Tipo do produto:"></p:outputLabel>
+				<p:selectOneMenu disabled="true" value="#{produtoBean.produtoEdit.tipo}">
+					<f:selectItems id="tipoInput" value="#{produtoBean.tipos}" var="tipo" itemLabel="#{tipo.label}" itemValue="#{tipo}"/>
+				</p:selectOneMenu>
+				<p:outputLabel value="Foto do produto:"></p:outputLabel>
+			</p:panelGrid>
+		</p:dialog>
+	</h:form>
+
+	<h:form prependId="false">
+		<p:dialog id="dialogUsuario"
+				  header="Usuario"
+				  widgetVar="dialogUsuario" resizable="false" width="500"
+				  hideEffect="drop" modal="true">
+			<p:panelGrid id="panelUsuario" columns="2">
+				<p:outputLabel value="Nome:"></p:outputLabel>
+				<p:inputText value="#{usuarioBean.usuarioEdit.nome}"></p:inputText>
+				<p:outputLabel value="Email:"></p:outputLabel>
+				<p:inputText value="#{usuarioBean.usuarioEdit.email}"></p:inputText>
+				<p:outputLabel value="Senha:"></p:outputLabel>
+				<p:password value="#{usuarioBean.usuarioEdit.senha}"></p:password>
+				<p:outputLabel value="Confirma Senha:"></p:outputLabel>
+				<p:password value="#{usuarioBean.confirmaSenha}"></p:password>
+			</p:panelGrid>
+				<p:commandButton value="Salvar" actionListener="#{usuarioBean.salvar}"></p:commandButton>
+		</p:dialog>
+	</h:form>
 
 </h:body>
 </html>

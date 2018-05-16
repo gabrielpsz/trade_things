@@ -29,7 +29,7 @@ public class LoginBean {
 			System.out.println("Logou");
 			logado = true;
 			try {
-				FacesContext.getCurrentInstance().getExternalContext().redirect("produto/cadastrarProduto.xhtml");
+				FacesContext.getCurrentInstance().getExternalContext().redirect("index.xhtml");
 			} catch(Exception e) {
 				System.out.println(e.getMessage());
 			}
@@ -41,6 +41,14 @@ public class LoginBean {
 		logado = false;
 		try {
 			FacesContext.getCurrentInstance().getExternalContext().redirect("index.xhtml");
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	public void abrirCadastroProduto() {
+		try {
+			FacesContext.getCurrentInstance().getExternalContext().redirect("produto/cadastrarProduto.xhtml");
 		} catch(Exception e) {
 			System.out.println(e.getMessage());
 		}
