@@ -35,6 +35,16 @@ public class LoginBean {
 			}
 		}
 	}
+
+	public void logout() {
+		usuarioLogado = null;
+		logado = false;
+		try {
+			FacesContext.getCurrentInstance().getExternalContext().redirect("index.xhtml");
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
 	
 	public String getEmail() {
 		return email;
@@ -54,6 +64,12 @@ public class LoginBean {
 	public void setUsuarioLogado(Usuario usuarioLogado) {
 		this.usuarioLogado = usuarioLogado;
 	}
-	
 
+	public Boolean getLogado() {
+		return logado;
+	}
+
+	public void setLogado(Boolean logado) {
+		this.logado = logado;
+	}
 }

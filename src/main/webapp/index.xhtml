@@ -27,40 +27,53 @@
 	.header {
 		text-align: right;
 	}
+	.table {
+		width: 300px;
+	}
 
 
 </style>
 
 		<h:form>
-		
-		<div class="header">
-			<p:outputLabel class="login-header" value="Email:"></p:outputLabel>
-			<p:inputText style="width:100px" value="#{loginBean.email}"></p:inputText>
-			
-			<p:outputLabel class="login-header" value="Senha:"></p:outputLabel>
-			<p:password style="width:100px; margin-right: 10px;" value="#{loginBean.senha}"></p:password>
-			
-			<p:commandButton value="Login" actionListener="#{loginBean.autentica()}"></p:commandButton>
-		</div>
-		<div class="header">
-			<p:commandButton value="Cadastrar" actionListener="#{usuarioBean.abreCadastroUsuario()}"></p:commandButton>
-		</div>
+		<ui:fragment rendered="#{!loginBean.logado}">
+			<div class="header">
+				<p:outputLabel class="login-header" value="Email:"></p:outputLabel>
+				<p:inputText style="width:100px" value="#{loginBean.email}"></p:inputText>
+
+				<p:outputLabel class="login-header" value="Senha:"></p:outputLabel>
+				<p:password style="width:100px; margin-right: 10px;" value="#{loginBean.senha}"></p:password>
+
+				<p:commandButton value="Login" actionListener="#{loginBean.autentica()}"></p:commandButton>
+			</div>
+			<div class="header">
+				<p:commandButton value="Cadastrar" actionListener="#{usuarioBean.abreCadastroUsuario()}"></p:commandButton>
+			</div>
+		</ui:fragment>
+		<ui:fragment rendered="#{loginBean.logado}">
+			<div class="header-nome">
+				<p:outputLabel value="Bem vindo, #{loginBean.usuarioLogado.nome}"></p:outputLabel>
+			</div>
+			<div class="header">
+				<p:commandButton value="Logout" actionListener="#{loginBean.logout()}"></p:commandButton>
+			</div>
+		</ui:fragment>
 
 			<div id="produtos">
 				<p:dataGrid id="table" var="entity"
-							value="#{produtoBean.produtos}" columns="1" rows="5"
-							paginatorAlwaysVisible="false" paginatorPosition="bottom"
+							value="#{produtoBean.produtos}" columns="2"
 							emptyMessage="Sem produtos para troca">
-					<p:panel>
+					<p:panel style="background-color: #cccccc;">
 						<h:outputText value="Nome: #{entity.nome}" />
+						<br></br>
 						<p:commandLink styleClass="button"
 									   actionListener="#{produtoBean.visualizarProduto()}"
-									   title="Visualizar" >
+									   title="Visualizar" value="Visualizar">
 							<f:param name="entity" value="#{entity}" />
 						</p:commandLink>
+						<br></br>
 						<p:commandLink styleClass="button"
 									   actionListener="#{produtoBean.trocarProduto()}"
-									   title="Trocar">
+									   title="Trocar" value="Trocar">
 							<f:param name="entity" value="#{entity}" />
 						</p:commandLink>
 					</p:panel>
