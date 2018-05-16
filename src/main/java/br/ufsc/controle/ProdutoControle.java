@@ -22,6 +22,15 @@ public class ProdutoControle {
         }
     }
 
+    public void excluir(Produto p) throws Exception {
+        if (p == null) {
+            throw new Exception("É obrigatório escolher um produto para excluir");
+        }
+        produtoDao.excluir(p);
+    }
+
+
+
     public List<Produto> queryAll() {
         return produtoDao.queryAll();
     }

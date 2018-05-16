@@ -62,6 +62,23 @@ public class ProdutoBean extends _Bean {
         produtoEdit = (Produto)getJsfParam("entity");
     }
 
+    public void excluirProduto() {
+        Produto p  = (Produto)getJsfParam("entity");
+        FacesContext faces = FacesContext.getCurrentInstance();
+        System.out.println(p);
+        try {
+            produtoControle.excluir(p);
+            faces.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Produto excluido com sucesso!", ""));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            FacesContext.getCurrentInstance().getExternalContext().redirect("meusProdutos.xhtml");
+        } catch(Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
     public List<Tipo> getTipos() {
         return tipos;
     }

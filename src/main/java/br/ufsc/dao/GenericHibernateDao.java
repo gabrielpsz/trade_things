@@ -14,6 +14,7 @@ public class GenericHibernateDao<E> implements Dao<E> {
     }
 
     public void excluir(E e) {
+        System.out.println("Excluindo");
         ConnectionManager.getEntityManager().getTransaction().begin();
         ConnectionManager.getEntityManager().remove(e);
         ConnectionManager.getEntityManager().getTransaction().commit();

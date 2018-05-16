@@ -50,6 +50,22 @@ public class UsuarioBean {
 			System.out.println(e.getMessage());
 		}
 	}
+
+	public void abreMeusProdutos() {
+		try {
+			FacesContext.getCurrentInstance().getExternalContext().redirect("produto/meusProdutos.xhtml");
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	public void abreTelaInicial() {
+		try {
+			FacesContext.getCurrentInstance().getExternalContext().redirect("../index.xhtml");
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
 	
 	//
 	// Getters and setters

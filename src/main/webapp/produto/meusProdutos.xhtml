@@ -58,8 +58,8 @@
 							   update="dialogUsuario, panelUsuario"
 							   title="Editar" value="Editar"/>
 				<p:commandButton styleClass="button"
-								 actionListener="#{usuarioBean.abreMeusProdutos()}"
-								 title="Meus produtos" value="Meus produtos"/>
+								 actionListener="#{usuarioBean.abreTelaInicial()}"
+								 title="Produtos para trocar" value="Produtos para trocar"/>
 			</div>
 			<div class="header">
 				<p:commandButton value="Logout" actionListener="#{loginBean.logout()}"></p:commandButton>
@@ -71,7 +71,7 @@
 				<p:dataGrid id="table" var="entity"
 							value="#{produtoBean.produtos}" columns="2"
 							emptyMessage="Sem produtos para troca">
-					<p:panel rendered="#{entity.usuario != loginBean.usuarioLogado}" style="background-color: #cccccc;">
+					<p:panel rendered="#{entity.usuario == loginBean.usuarioLogado}" style="background-color: #cccccc;">
 						<h:outputText value="Nome: #{entity.nome}" />
 						<br></br>
 						<p:commandLink styleClass="button"
@@ -83,8 +83,8 @@
 						</p:commandLink>
 						<br></br>
 						<p:commandLink styleClass="button"
-									   actionListener="#{produtoBean.trocarProduto()}"
-									   title="Trocar" value="Trocar">
+									   actionListener="#{produtoBean.excluirProduto()}"
+									   title="Excluir" value="Excluir">
 							<f:param name="entity" value="#{entity}" />
 						</p:commandLink>
 					</p:panel>
