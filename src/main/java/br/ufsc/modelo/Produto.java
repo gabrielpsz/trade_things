@@ -21,6 +21,8 @@ public class Produto {
     @ManyToOne
     @JoinColumn(name="fk_usuario",nullable=false)
     private Usuario usuario;
+    @Column
+    private String foto;
     // GETTERS AND SETTERS
 
     public Long getId() {
@@ -71,5 +73,13 @@ public class Produto {
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 }

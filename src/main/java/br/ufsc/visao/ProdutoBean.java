@@ -33,8 +33,6 @@ public class ProdutoBean extends _Bean {
     List<Status> status = Arrays.asList(Status.values());
     Produto produtoEdit = new Produto();
 
-    String displayedLogo = "";
-
     FacesContext context = FacesContext.getCurrentInstance();
     LoginBean loginBean = context.getApplication().evaluateExpressionGet(context, "#{loginBean}", LoginBean.class);
 
@@ -44,6 +42,7 @@ public class ProdutoBean extends _Bean {
             System.out.println(loginBean.getUsuarioLogado());
             produtoEdit.setStatus(Status.DISPONIVEL);
             produtoEdit.setUsuario(loginBean.getUsuarioLogado());
+            produtoEdit.setFoto(displayedLogo);
             produtoControle.salvar(produtoEdit);
             faces.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Cadastrado com sucesso!", ""));
             FacesContext.getCurrentInstance().getExternalContext().redirect("../index.xhtml");

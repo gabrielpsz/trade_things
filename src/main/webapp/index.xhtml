@@ -105,6 +105,7 @@
 					<f:selectItems id="tipoInput" value="#{produtoBean.tipos}" var="tipo" itemLabel="#{tipo.label}" itemValue="#{tipo}"/>
 				</p:selectOneMenu>
 				<p:outputLabel value="Foto do produto:"></p:outputLabel>
+				<p:graphicImage id="logoImage" width="60" height="60" cache="false" url="../upload/#{produtoBean.produtoEdit.foto}" />
 			</p:panelGrid>
 		</p:dialog>
 	</h:form>

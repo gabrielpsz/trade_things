@@ -7,12 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12f3387e-bbe0-4935-a408-e35ebda33500" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufsc/visao/LoginBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufsc/visao/LoginBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufsc/modelo/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufsc/modelo/Produto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufsc/visao/ProdutoBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufsc/visao/ProdutoBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufsc/visao/UsuarioBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufsc/visao/UsuarioBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cadastrarUsuario.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cadastrarUsuario.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,15 +19,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Trade_Things$index_xhtml.ic" NAME="index.xhtml Coverage Results" MODIFIED="1526299560981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Trade_Things$index_xhtml.ic" NAME="index.xhtml Coverage Results" MODIFIED="1526499943404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProdutoBean.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProdutoBean.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/visao/ProdutoBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="238">
+              <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
               <folding>
                 <element signature="e#2106#2107#0" expanded="true" />
                 <element signature="e#2164#2165#0" expanded="true" />
@@ -44,12 +40,27 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Produto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/modelo/Produto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="77" column="29" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="29" />
+              <folding>
+                <element signature="e#1685#1686#0" expanded="true" />
+                <element signature="e#1725#1726#0" expanded="true" />
+                <element signature="e#1757#1758#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="_Bean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/visao/_Bean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+            <state relative-caret-position="173">
+              <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#4541#4542#0" expanded="true" />
                 <element signature="e#4607#4608#0" expanded="true" />
               </folding>
@@ -57,11 +68,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="GenericHibernateDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/dao/GenericHibernateDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ProdutoControle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/controle/ProdutoControle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="24" column="33" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="33" />
+            <state relative-caret-position="131">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#652#653#0" expanded="true" />
                 <element signature="e#696#697#0" expanded="true" />
@@ -73,17 +93,17 @@
       <file leaf-file-name="index.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="121" column="58" lean-forward="true" selection-start-line="121" selection-start-column="58" selection-end-line="121" selection-end-column="58" />
+            <state relative-caret-position="554">
+              <caret line="126" column="87" selection-start-line="126" selection-start-column="87" selection-end-line="126" selection-end-column="87" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cadastrarProduto.xhtml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cadastrarProduto.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/produto/cadastrarProduto.xhtml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="332">
-              <caret line="50" column="124" lean-forward="true" selection-start-line="50" selection-start-column="124" selection-end-line="50" selection-end-column="124" />
+              <caret line="50" column="99" selection-start-line="50" selection-start-column="99" selection-end-line="50" selection-end-column="99" />
             </state>
           </provider>
         </entry>
@@ -100,8 +120,12 @@
       <file leaf-file-name="UsuarioBean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/visao/UsuarioBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+            <state relative-caret-position="170">
+              <caret line="42" column="51" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
+              <folding>
+                <element signature="e#1399#1400#0" expanded="true" />
+                <element signature="e#1448#1449#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,8 +158,8 @@
       <find>messages</find>
       <find>logoImage</find>
       <find>dialogProduto</find>
-      <find>vis</find>
       <find>trocar</find>
+      <find>vis</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/main/java/br/ufsc/dao</dir>
@@ -157,14 +181,14 @@
         <option value="$PROJECT_DIR$/src/main/java/br/ufsc/visao/_Bean.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/produto/cadastrarProduto.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/br/ufsc/dao/ProdutoDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/ufsc/modelo/Produto.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/ufsc/dao/ProdutoDaoImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/ufsc/controle/ProdutoControle.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/ufsc/visao/LoginBean.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/cadastrarUsuario.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/br/ufsc/visao/UsuarioBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/ufsc/visao/ProdutoBean.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/br/ufsc/modelo/Produto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/ufsc/visao/ProdutoBean.java" />
       </list>
     </option>
   </component>
@@ -235,6 +259,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="produto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Trade_Things" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trade_things" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -472,7 +504,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16495000" />
+    <option name="totallyTimeSpent" value="17088000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -499,6 +531,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41918528" />
+      <window_info anchor="right" id="Coverage" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3298292" />
       <window_info id="Persistence" order="3" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.215625" />
@@ -517,7 +550,6 @@
       <window_info id="Learn" order="3" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Application Servers" order="8" />
-      <window_info anchor="right" id="Coverage" order="4" side_tool="true" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info id="Web" order="3" side_tool="true" />
@@ -595,13 +627,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/visao/ProdutoBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/visao/LoginBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -849,15 +874,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/modelo/Produto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/upload/.dale">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/cadastrarUsuario.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="44" column="74" lean-forward="true" selection-start-line="37" selection-start-column="12" selection-end-line="44" selection-end-column="74" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/visao/LoginBean.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -868,33 +893,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/visao/UsuarioBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+        <state relative-caret-position="170">
+          <caret line="42" column="51" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
+          <folding>
+            <element signature="e#1399#1400#0" expanded="true" />
+            <element signature="e#1448#1449#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="126" column="87" selection-start-line="126" selection-start-column="87" selection-end-line="126" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/produto/cadastrarProduto.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="50" column="99" selection-start-line="50" selection-start-column="99" selection-end-line="50" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/modelo/Produto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="77" column="29" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="29" />
+          <folding>
+            <element signature="e#1685#1686#0" expanded="true" />
+            <element signature="e#1725#1726#0" expanded="true" />
+            <element signature="e#1757#1758#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/visao/_Bean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+        <state relative-caret-position="173">
+          <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#4541#4542#0" expanded="true" />
             <element signature="e#4607#4608#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/cadastrarUsuario.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/dao/GenericHibernateDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="44" column="74" lean-forward="true" selection-start-line="37" selection-start-column="12" selection-end-line="44" selection-end-column="74" />
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/controle/ProdutoControle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/visao/ProdutoBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="238">
+          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
           <folding>
             <element signature="e#2106#2107#0" expanded="true" />
             <element signature="e#2164#2165#0" expanded="true" />
@@ -903,31 +970,6 @@
             <element signature="e#2995#2996#0" expanded="true" />
             <element signature="e#3035#3036#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="121" column="58" lean-forward="true" selection-start-line="121" selection-start-column="58" selection-end-line="121" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/ufsc/controle/ProdutoControle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="33" />
-          <folding>
-            <element signature="e#652#653#0" expanded="true" />
-            <element signature="e#696#697#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/produto/cadastrarProduto.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="50" column="124" lean-forward="true" selection-start-line="50" selection-start-column="124" selection-end-line="50" selection-end-column="124" />
         </state>
       </provider>
     </entry>
